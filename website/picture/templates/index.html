@@ -1,0 +1,72 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+<div class="w3-container center-block">
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="w3-btn-success  ">Upload</button>
+    </form>
+</div>
+{% if img_obj %}
+
+<h3>Succesfully images create & uploaded : {{img_obj.countofpic }}</h3>
+</div>
+
+<div class="w3-content" style="max-width:1200px">
+
+    <img class="mySlides" src="{{ img_obj.image.url}}" style="width:100%">
+    {% for my_item in imagelistName %}
+
+    <img class="mySlides" src="media/images/{{ my_item }}" style="width:100%;display:none">
+    {% endfor %}
+
+    <div class="w3-row-padding w3-section">
+        <div class="w3-col s4">
+            <img class="demo w3-opacity w3-hover-opacity-off" src="{{ img_obj.image.url}}"
+                 style="width:100%;cursor:pointer" onclick="currentDiv(1)">
+        </div>
+        {% for my_item in imagelistName %}
+
+        <div class="w3-col s4">
+            <img class="demo w3-opacity w3-hover-opacity-off" src="media/images/{{ my_item }}"
+                 style="width:300px;cursor:pointer" onclick="currentDiv(2)">
+        </div>
+        {% endfor %}
+
+
+    </div>
+</div>
+
+<script>
+    function currentDiv(n) {
+        showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = x.length
+        }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+        }
+        x[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " w3-opacity-off";
+    }
+</script>
+
+</body>
+
+
+{% endif %}
+
