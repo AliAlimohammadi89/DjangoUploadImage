@@ -110,8 +110,7 @@ ENV/
 
 .DS_Store
 *.sqlite3
-media/
-media/image
+media/images
 *.pyc
 *.db
 *.pid
