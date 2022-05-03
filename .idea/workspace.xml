@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d375424b-9e7f-4d5f-a9d4-a8aba3189c59" name="Default Changelist" comment="" />
+    <list default="true" id="d375424b-9e7f-4d5f-a9d4-a8aba3189c59" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/picture/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/picture/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/website/requirements.txt" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="28YY4h3S9d2jFvo7DqlOwMSfMBt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/website/media/images" />
@@ -20,17 +37,17 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\python\khajezadehapp\website\media\images" />
-      <recent name="D:\python\khajezadehapp\website\media" />
-      <recent name="D:\python\khajezadehapp\website" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\python\khajezadehapp\khajizadeh" />
       <recent name="D:\python\khajezadehapp\website\media\images" />
       <recent name="D:\python\khajezadehapp\website" />
       <recent name="D:\python\khajezadehapp\website\media" />
       <recent name="D:\python\khajezadehapp\website\picture\templates" />
-      <recent name="D:\python\khajezadehapp\website\picture" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\python\khajezadehapp\website\media\images" />
+      <recent name="D:\python\khajezadehapp\website\media" />
+      <recent name="D:\python\khajezadehapp\website" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -55,11 +72,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1651394796735</updated>
-      <workItem from="1651394798541" duration="40064000" />
+      <workItem from="1651394798541" duration="42888000" />
+      <workItem from="1651595206325" duration="3485000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
