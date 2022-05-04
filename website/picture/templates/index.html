@@ -12,44 +12,73 @@
 </head>
 <body>
 
-<form method="post" enctype="multipart/form-data">
+<form id="1" method="post" enctype="multipart/form-data">
     {% csrf_token %}
-<!--    {{ form.as_p }}-->
-
-<div class="container">
-    <h1>
-        <center >Edit Image</center>
-    </h1>
-    <div class="well" data-bind="fileDrag: fileData">
-        <div class="form-group row">
-            <div class="col-md-6">
-                <img style="height: 125px;" class="img-rounded  thumb" data-bind="attr: { src: fileData().dataURL }, visible: fileData().dataURL">
-                <div data-bind="ifnot: fileData().dataURL">
-                    <label class="drag-label"></label>
+    <!--    {{ form.as_p }}-->
+    <div class="container">
+        <h1>
+            <center>Edit Image</center>
+        </h1>
+        <div class="well" data-bind="fileDrag: fileData">
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <img style="height: 125px;" class="img-rounded  thumb"
+                         data-bind="attr: { src: fileData().dataURL }, visible: fileData().dataURL">
+                    <div data-bind="ifnot: fileData().dataURL">
+                        <label class="drag-label"></label>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <input  name="image" id="id_image"  type="file" data-bind="fileInput: fileData, customFileInput: {
+                <div class="col-md-6">
+                    <input name="image" id="id_image" type="file" data-bind="fileInput: fileData, customFileInput: {
 	              buttonClass: 'btn btn-success',
 	              fileNameClass: 'disabled form-control',
 	              onClear: onClear,
 	              onInvalidFileDrop: onInvalidFileDrop
 	            }" accept="image/*">
 
-                <input type="hidden"   name="countofpic" value="3" required="" id="id_countofpic">
+                    <input type="hidden" name="countofpic" value="1" required="" id="id_countofpic">
 
-            </div>
-            <div class="col-md-12 text-center button " style="margin-top: 10px">
-                <button type="submit" class="btn btn-danger">Upload</button>
+                </div>
+                <div class="col-md-12 text-center button " style="margin-top: 10px">
+                    <button type="submit" class="btn btn-danger">Upload</button>
+                </div>
             </div>
         </div>
     </div>
-
-
-</div>
 </form>
 
-<script src='http://cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js'></script><script src='media/style/knockout-file-bindings.js'></script>
+<form id="2" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <!--    {{ form.as_p }}-->
+    <div class="container">
+        <h1>
+            <center>Edit Image</center>
+        </h1>
+        <div class="well" data-bind="fileDrag: fileData">
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <!--                    <img style="height: 125px;" class="img-rounded  thumb" data-bind="attr: { src: fileData().dataURL }, visible: fileData().dataURL">-->
+                    <div data-bind="ifnot: fileData().dataURL">
+                        <label class="drag-label"></label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <input name="image" id="id_image" type="file" accept="image/*">
+
+                    <input type="hidden" name="countofpic" value="2" required="" id="id_countofpic2">
+
+                </div>
+                <div class="col-md-12 text-center button " style="margin-top: 10px">
+                    <button type="submit" class="btn btn-danger">Upload</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js'></script>
+<script src='media/style/knockout-file-bindings.js'></script>
 <script>
     var viewModel = {};
     viewModel.fileData = ko.observable({
@@ -57,7 +86,7 @@
         // can add "fileTypes" observable here, and it will override the "accept" attribute on the file input
         // fileTypes: ko.observable('.xlsx,image/png,audio/*')
     });
-    viewModel.multiFileData = ko.observable({ dataURLArray: ko.observableArray() });
+    viewModel.multiFileData = ko.observable({dataURLArray: ko.observableArray()});
     viewModel.onClear = function (fileData) {
         if (confirm('Are you sure?')) {
             fileData.clear && fileData.clear();
@@ -66,26 +95,23 @@
     viewModel.debug = function () {
         window.viewModel = viewModel;
         console.log(ko.toJSON(viewModel));
-        console.log(viewModel.multiFileData())
+        console.log(viewModel.multiFileData());
         console.log(viewModel.multiFileData().dataURLArray());
         console.log(viewModel.multiFileData().fileArray());
         debugger;
     };
-    viewModel.onInvalidFileDrop = function(failedFiles) {
+    viewModel.onInvalidFileDrop = function (failedFiles) {
         var fileNames = [];
         for (var i = 0; i < failedFiles.length; i++) {
             fileNames.push(failedFiles[i].name);
         }
         var message = 'Invalid file type: ' + fileNames.join(', ');
-        alert(message)
+        alert(message);
         console.error(message);
     };
     ko.applyBindings(viewModel);
 </script>
 
 
-<script>
-
-</script>
 </body>
 </html>
