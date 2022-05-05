@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <input name="image" id="id_image" type="file" data-bind="fileInput: fileData, customFileInput: {
+                    <input name="image" src="media/images/33.jpg" id="id_image" type="file" data-bind="fileInput: fileData, customFileInput: {
 	              buttonClass: 'btn btn-success',
 	              fileNameClass: 'disabled form-control',
 	              onClear: onClear,
@@ -52,7 +52,7 @@
     <!--    {{ form.as_p }}-->
     <div class="container">
         <h1>
-            <center>Edit Image</center>
+            <center>Edit Image2</center>
         </h1>
         <div class="well" data-bind="fileDrag: fileData">
             <div class="form-group row">
@@ -63,13 +63,73 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <input name="image" id="id_image" type="file" accept="image/*">
+                    <!--                    <input name="image" id="id_image" value="1.jpg" type="file" accept="image/*">-->
 
                     <input type="hidden" name="countofpic" value="2" required="" id="id_countofpic2">
 
                 </div>
                 <div class="col-md-12 text-center button " style="margin-top: 10px">
-                    <button type="submit" class="btn btn-danger">Upload</button>
+                    <button type="submit" class="btn btn-danger">Run2</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<form id="3" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <!--    {{ form.as_p }}-->
+    <div class="container">
+        <h1>
+            <center>Edit Image3</center>
+        </h1>
+        <div class="well" data-bind="fileDrag: fileData">
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <!--                    <img style="height: 125px;" class="img-rounded  thumb" data-bind="attr: { src: fileData().dataURL }, visible: fileData().dataURL">-->
+                    <div data-bind="ifnot: fileData().dataURL">
+                        <label class="drag-label"></label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <!--                    <input name="image" id="id_image" value="1.jpg" type="file" accept="image/*">-->
+
+                    <input type="hidden" name="countofpic" value="3" required="" id="id_countofpic3">
+
+                </div>
+                <div class="col-md-12 text-center button " style="margin-top: 10px">
+                    <button type="submit" class="btn btn-danger">Run3</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<form id="4" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <!--    {{ form.as_p }}-->
+    <div class="container">
+        <h1>
+            <center>Edit Image4</center>
+        </h1>
+        <div class="well" data-bind="fileDrag: fileData">
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <!--                    <img style="height: 125px;" class="img-rounded  thumb" data-bind="attr: { src: fileData().dataURL }, visible: fileData().dataURL">-->
+                    <div data-bind="ifnot: fileData().dataURL">
+                        <label class="drag-label"></label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <!--                    <input name="image" id="id_image" value="1.jpg" type="file" accept="image/*">-->
+
+                    <input type="hidden" name="countofpic" value="3" required="" id="id_countofpic4">
+
+                </div>
+                <div class="col-md-12 text-center button " style="margin-top: 10px">
+                    <button type="submit" class="btn btn-danger">Run4</button>
                 </div>
             </div>
         </div>
